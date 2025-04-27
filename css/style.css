@@ -21,8 +21,11 @@
   --transition: 0.5s;
 }
 
-body {
-  min-height: 500vh;
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 60px 0 40px;
+  font-weight: 500;
 }
 
 .container {
@@ -45,13 +48,6 @@ a {
 input,
 button {
   outline: none;
-}
-
-.title {
-  text-align: center;
-  margin: 60px 0 40px;
-  text-transform: uppercase;
-  font-weight: 500;
 }
 
 /* Header start */
@@ -129,7 +125,7 @@ button {
 .menu__wrapper {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 50px;
   padding: 16px 0;
   position: relative;
 }
@@ -150,12 +146,13 @@ button {
   text-decoration: underline;
 }
 
-.manu__bar {
+.menu__bar {
   display: flex;
   flex-direction: column;
   gap: 4px;
   position: absolute;
   left: 0;
+  cursor: pointer;
 }
 
 .menu__bar button {
@@ -171,7 +168,6 @@ button {
   width: 300px;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -184,4 +180,68 @@ button {
   align-items: center;
   margin-top: 50px;
   gap: 20px;
+}
+
+
+.product__wrapper {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.product__card {
+  width: calc(25% - 30px);
+}
+
+.prodcut__card__image {
+  position: relative;
+}
+
+.prodcut__card__image img {
+  width: 343px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.prodcut__card__image span {
+  width: 40px;
+  height: 40px;
+  background: black;
+  color: white;
+  display: inline-block;
+  border-radius: 50%;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  display: grid;
+  place-items: center;
+  border: 3px solid white;
+  box-sizing: content-box;
+}
+
+.product__card__body {
+  text-align: center;
+  margin-top: 20px;
+  font-family: Rubik, sans-serif;
+}
+
+.product__card__body h3 {
+  margin-bottom: 30px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.product__card__body h3:hover {
+  text-decoration: underline;
+}
+
+.product__card__body p {
+  color: gray;
+  margin-bottom: 30px;
+  line-height: 25px;
+}
+
+.product__card__body strong {
+  font-size: 20px;
+  color: #5a5d60;
 }
